@@ -1,0 +1,77 @@
+site_name: Programación III
+site_url: https://valentinoarballo.github.io/documentacion-tercero/
+
+theme:
+  name: material
+  language: es
+  logo: assets/logo.png
+  favicon: assets/favicon.jpeg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  palette:
+    # Modo claro
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo oscuro
+    # Modo oscuro
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo claro
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+
+extra_css:
+  - stylesheets/custom.css
+
+nav:
+  - Inicio: index.md
+  - Tema 1. Introducción a Programación III: tema1.md
+  - Tema 2. Configuración inicial de Next.js: tema2.md
+  - Tema 3. Routing: tema3.md
+  - Tema 4. Layouts: tema4.md
+  - Tema 5. Componentes de servidor: tema5.md
+  - Tema 6. Componentes de cliente, estado y contexto: tema6.md
+  - Tema 7. Fetch, API Routes y Chat con IA: tema7.md
+  - Tema 8. Configuración de Prisma: tema8.md
+  - Tema 8 (parte 2). CRUD de productos con Prisma: tema8b.md
+  - Tema 9. Autenticación con Clerk: tema9.md
+  - Tema 9 (parte 2). Usuarios de Clerk en la base de datos local: tema9b.md
+  - Tema 10. React Hook Form y Zod: tema10.md
+  - Tema 11. Testing con Vitest: tema11.md
+  - Tema 12. Deploy de Prisma en Supabase: tema12.md
+  - Tema 13. Deploy de Next.js en Vercel: tema13.md
+  - Tema 14. Introducción a Astro: tema14.md
+  - Tema 15. Rutas dinámicas y View Transitions en Astro: tema15.md
+  - Tema 16. Server Islands e islas dinámicas en Astro: tema16.md
+  - Tema 17. Tests y validaciones en Astro: tema17.md
+  - Tema 18. Configuración de Render y Vercel para deploy fullstack: tema18.md
+  - Tema 19. Autenticación con Django: tema19.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
