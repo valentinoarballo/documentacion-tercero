@@ -1,0 +1,192 @@
+/* =========================================================
+   Colores (primary/accent "custom" definidos en mkdocs.yml)
+   ========================================================= */
+:root {
+  --radius: 12px;
+  --radius-sm: 8px;
+}
+
+/* ---------- Modo claro ---------- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #6d28d9;
+  --md-primary-fg-color--light: #8b5cf6;
+  --md-primary-fg-color--dark: #5b21b6;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.75);
+
+  --md-accent-fg-color: #0891b2;
+  --md-accent-fg-color--transparent: rgba(8, 145, 178, 0.12);
+  --md-accent-bg-color: #ffffff;
+  --md-accent-bg-color--light: rgba(255, 255, 255, 0.75);
+
+  --md-typeset-a-color: #6d28d9;
+  --md-code-bg-color: #f5f3ff;
+
+  --grad-a: #6d28d9;
+  --grad-b: #4f46e5;
+  --border-soft: rgba(109, 40, 217, 0.14);
+}
+
+/* ---------- Modo oscuro ---------- */
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: #0d0f17;
+  --md-default-bg-color--light: rgba(13, 15, 23, 0.54);
+  --md-default-bg-color--lighter: rgba(13, 15, 23, 0.26);
+  --md-default-bg-color--lightest: rgba(13, 15, 23, 0.07);
+  --md-default-fg-color: rgba(238, 240, 250, 0.92);
+  --md-default-fg-color--light: rgba(238, 240, 250, 0.68);
+  --md-default-fg-color--lighter: rgba(238, 240, 250, 0.32);
+  --md-default-fg-color--lightest: rgba(238, 240, 250, 0.08);
+
+  --md-primary-fg-color: #8b5cf6;
+  --md-primary-fg-color--light: #a78bfa;
+  --md-primary-fg-color--dark: #6d28d9;
+  --md-primary-bg-color: #ffffff;
+  --md-primary-bg-color--light: rgba(255, 255, 255, 0.75);
+
+  --md-accent-fg-color: #22d3ee;
+  --md-accent-fg-color--transparent: rgba(34, 211, 238, 0.12);
+  --md-accent-bg-color: #0d0f17;
+  --md-accent-bg-color--light: rgba(13, 15, 23, 0.75);
+
+  --md-typeset-a-color: #a78bfa;
+  --md-code-bg-color: #151826;
+  --md-code-fg-color: #e5e7f5;
+
+  --grad-a: #4c1d95;
+  --grad-b: #312e81;
+  --border-soft: rgba(167, 139, 250, 0.16);
+}
+
+/* =========================================================
+   Base
+   ========================================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: var(--md-accent-fg-color--transparent);
+}
+
+.md-grid {
+  max-width: 72rem;
+}
+
+/* =========================================================
+   Header con degradé y sombra suave
+   ========================================================= */
+.md-header {
+  background: linear-gradient(90deg, var(--grad-a), var(--grad-b));
+  box-shadow: 0 8px 24px -14px rgba(0, 0, 0, 0.45);
+}
+
+/* Permite que el logo tenga un ancho automático y no se comprima */
+.md-header__button.md-logo img {
+  width: auto;
+  height: 40px;
+}
+
+.md-header__button.md-logo {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/* Buscador en forma de píldora */
+.md-search__form {
+  border-radius: 999px;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* =========================================================
+   Tipografía
+   ========================================================= */
+.md-typeset h1 {
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--md-default-fg-color);
+}
+
+.md-typeset h2 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  padding-bottom: 0.3em;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.md-typeset h3,
+.md-typeset h4 {
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.md-typeset a {
+  transition: color 0.15s ease;
+}
+
+/* =========================================================
+   Navegación lateral
+   ========================================================= */
+.md-nav__link {
+  transition: color 0.15s ease;
+}
+
+.md-nav__link--active {
+  font-weight: 600;
+}
+
+/* =========================================================
+   Código
+   ========================================================= */
+.md-typeset code {
+  border-radius: 6px;
+}
+
+.md-typeset .highlight,
+.md-typeset pre > code {
+  border-radius: var(--radius);
+}
+
+.md-typeset .highlight {
+  border: 1px solid var(--border-soft);
+  overflow: hidden;
+}
+
+/* =========================================================
+   Admonitions, detalles y tablas
+   ========================================================= */
+.md-typeset .admonition,
+.md-typeset details {
+  border-radius: var(--radius);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.md-typeset table:not([class]) {
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  box-shadow: none;
+  overflow: hidden;
+}
+
+.md-typeset img {
+  border-radius: var(--radius-sm);
+}
+
+/* =========================================================
+   Scrollbar fina
+   ========================================================= */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--md-primary-fg-color--light) transparent;
+}
+
+  [data-md-color-primary="custom"] {
+    --md-primary-fg-color: #0a7;
+    --md-primary-bg-color: #fff;
+  }
+  [data-md-color-accent="custom"] {
+    --md-accent-fg-color: #f60;
+  }
